@@ -1,3 +1,4 @@
+/* Базовые стили */
 * {
   margin: 0;
   padding: 0;
@@ -5,50 +6,112 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f8f8f8;
-  color: #222;
+  font-family: 'Courier New', monospace;
+  background-color: #F2DDC6;
+  color: #1a1a1a;
   padding: 20px;
   text-align: center;
 }
 
+/* Хедер */
 .hero {
-  margin-top: 40px;
-  animation: fadeIn 2s ease-in-out forwards;
+  margin-top: 30px;
+  animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .logo {
-  width: 120px;
+  width: 100px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .project-title {
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: bold;
 }
 
+/* Контент */
 .content {
   margin-top: 40px;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  visibility: hidden;
+  transition: opacity 1.5s ease-in-out, visibility 0.5s;
 }
 
 .content.show {
   opacity: 1;
+  visibility: visible;
 }
 
-.hidden {
-  visibility: hidden;
+.intro {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
+/* Анимация */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-15px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Окно редактора как в VS Code */
+.code-editor {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  background-color: #1e1e1e;
+  overflow: hidden;
+  text-align: left;
+}
+
+.editor-header {
+  background-color: #333;
+  height: 32px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.editor-title {
+  color: #ccc;
+  margin-left: auto;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.editor-body {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 15px;
+  background-color: #1e1e1e;
+  color: #f8f8f8;
+  font-size: 1em;
+  line-height: 1.6;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
 }
