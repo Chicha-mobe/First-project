@@ -2,19 +2,31 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Мой Проект</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Создание Приложения</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
     <img src="logo.png" alt="Логотип" class="logo" />
-    <h1 class="project-title">Название проекта</h1>
+    <h1 class="project-title">AppMaker — Создание Приложений</h1>
   </header>
 
   <main class="content hidden">
-    <p>Добро пожаловать на наш сайт! Здесь вы найдёте полезную информацию.</p>
-    <p id="resolution">Определяем разрешение устройства...</p>
+    <section class="intro">
+      <p>Мы разрабатываем приложения, которые упрощают жизнь. Используем современные технологии и креативный подход к UI/UX-дизайну.</p>
+      <p id="resolution">Определяем разрешение устройства...</p>
+    </section>
+
+    <section class="code-editor">
+      <div class="editor-header">
+        <span class="circle red"></span>
+        <span class="circle yellow"></span>
+        <span class="circle green"></span>
+        <span class="editor-title">main.js</span>
+      </div>
+      <textarea class="editor-body" placeholder="// Напишите свой код..."></textarea>
+    </section>
   </main>
 
   <script src="script.js"></script>
