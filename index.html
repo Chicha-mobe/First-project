@@ -3,30 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Создание Приложения</title>
+  <title>Создание приложений</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
     <img src="logo.png" alt="Логотип" class="logo" />
-    <h1 class="project-title">AppMaker — Создание Приложений</h1>
+    <h1 class="project-title">Создание приложений</h1>
   </header>
 
   <main class="content hidden">
-    <section class="intro">
-      <p>Мы разрабатываем приложения, которые упрощают жизнь. Используем современные технологии и креативный подход к UI/UX-дизайну.</p>
-      <p id="resolution">Определяем разрешение устройства...</p>
+    <section class="about">
+      <h2>О проекте</h2>
+      <p>Мы создаём мобильные и веб-приложения под ключ: от идеи до публикации в магазинах. Используем современные технологии и адаптивный дизайн.</p>
     </section>
 
-    <section class="code-editor">
-      <div class="editor-header">
-        <span class="circle red"></span>
-        <span class="circle yellow"></span>
-        <span class="circle green"></span>
-        <span class="editor-title">main.js</span>
+    <section class="code-block">
+      <div class="code-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="filename">app.js</span>
       </div>
-      <textarea class="editor-body" placeholder="// Напишите свой код..."></textarea>
+      <pre><code>
+import React from 'react';
+import App from './App';
+import { createRoot } from 'react-dom/client';
+
+const root = createRoot(document.getElementById('root'));
+root.render(&lt;App /&gt;);
+      </code></pre>
     </section>
+
+    <section class="examples">
+      <h2>Примеры работ</h2>
+      <div class="examples-grid">
+        <div class="example"><img src="example1.jpg" alt="Проект 1"></div>
+        <div class="example"><img src="example2.jpg" alt="Проект 2"></div>
+        <div class="example"><img src="example3.jpg" alt="Проект 3"></div>
+        <div class="example"><img src="example4.jpg" alt="Проект 4"></div>
+      </div>
+    </section>
+
+    <footer class="contacts">
+      <a href="https://t.me/Chicha207" class="btn" target="_blank">Мои контакты (Telegram)</a>
+      <a href="https://t.me/+jmDTG2qgejM3MDli" class="btn" target="_blank">Мой канал (Telegram)</a>
+    </footer>
   </main>
 
   <script src="script.js"></script>
